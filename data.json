@@ -1,0 +1,112 @@
+{
+        "photos": [
+                ".jpg",
+                ".jpeg",
+                ".png",
+                ".bmp",
+                ".gif",
+                ".tiff",
+                ".webp"
+        ],
+        "videos": [
+                ".mp4",
+                ".avi",
+                ".flv",
+                ".wmv",
+                ".mov",
+                ".mkv",
+                ".webm",
+                ".mpeg",
+                ".mpg",
+                ".3gp",
+                ".m4v",
+                ".rm",
+                ".swf",
+                ".vob"
+        ],
+        "compressed": [
+                ".zip",
+                ".rar",
+                ".gz",
+                ".tar",
+                ".7z",
+                ".bz2",
+                ".xz",
+                ".tar.gz",
+                ".tar.xz",
+                ".tar.bz2"
+        ],
+        "pdf": [
+                ".pdf",
+                ".PDF"
+        ],
+        "word": [
+                ".doc",
+                ".docx",
+                ".docm",
+                ".dot",
+                ".dotx",
+                ".dotm"
+        ],
+        "excel": [
+                ".xls",
+                ".xlsx",
+                ".xlsm",
+                ".xlsb",
+                ".xltx",
+                ".xltm"
+        ],
+        "program": [
+                ".exe",
+                ".msi",
+                ".com",
+                ".bat",
+                ".cmd",
+                ".scr",
+                ".cpl",
+                ".hta"
+        ],
+        "text": [
+                ".txt",
+                ".csv",
+                ".tsv",
+                ".log",
+                ".json",
+                ".xml",
+                ".html",
+                ".htm",
+                ".md",
+                ".py",
+                ".cpp",
+                ".java",
+                ".c",
+                ".h",
+                ".php",
+                ".rb",
+                ".pl",
+                ".sql",
+                ".css",
+                ".js",
+                ".yaml",
+                ".ini",
+                ".cfg",
+                ".bat",
+                ".sh",
+                ".tex",
+                ".rtf",
+                ".doc",
+                ".docx"
+        ],
+        "ppt": [
+                ".ppt",
+                ".pptx",
+                ".pps",
+                ".ppsx",
+                ".pot",
+                ".potx",
+                ".odp"
+        ],
+        "android": [
+                ".apk"
+        ]
+}
