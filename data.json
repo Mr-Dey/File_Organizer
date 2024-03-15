@@ -6,7 +6,8 @@
                 ".bmp",
                 ".gif",
                 ".tiff",
-                ".webp"
+                ".webp",
+                ".ico"
         ],
         "videos": [
                 ".mp4",
@@ -95,7 +96,8 @@
                 ".tex",
                 ".rtf",
                 ".doc",
-                ".docx"
+                ".docx",
+                ".ovpn"
         ],
         "ppt": [
                 ".ppt",

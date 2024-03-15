@@ -3,32 +3,34 @@ import datetime
 import shutil
 import json
 
-
 # logic
 def logic(dir):
     with open("data.json","r") as data:
         folders=json.load(data)
     fileDict={value:key for key in folders for value in folders[key]}
-    
-    #######
-
+         
+    unknown_ext=set()
     for z in os.listdir(dir):
-        name, ext = os.path.splitext(z)
-        ext = ext.lower()
-        if ext in fileDict.keys():
-            if fileDict[ext] not in os.listdir(dir):
-                os.mkdir(dir+f"/{fileDict[ext]}")
-                print(f"{fileDict[ext]} folder created.")
-            try:
-                shutil.move(os.path.join(dir, z), dir+f"/{fileDict[ext]}")
-            except:
-                FileExistsError
-                date = datetime.datetime.now()
-                date = date.strftime("%Y-%m-%d-%H-%M-%S")
-                os.rename(dir+"/"+z, dir+"/"+name+date+ext)
-                logic(dir)
-
-
+        if os.path.isfile(f"{dir}/{z}"):
+            name, ext = os.path.splitext(z)
+            ext = ext.lower()
+            if ext in fileDict.keys():
+                if fileDict[ext] not in os.listdir(dir):
+                    os.mkdir(dir+f"/{fileDict[ext]}")
+                    print(f"{fileDict[ext]} folder created.")
+                try:
+                    shutil.move(os.path.join(dir, z), dir+f"/{fileDict[ext]}")
+                except:
+                    FileExistsError
+                    date = datetime.datetime.now()
+                    date = date.strftime("%Y-%m-%d-%H-%M-%S")
+                    os.rename(dir+"/"+z, dir+"/"+name+date+ext)
+                    logic(dir)
+            else:
+                unknown_ext.add(ext)
+    if len(unknown_ext)>0:
+        print(f"This Extension's are not added yet {unknown_ext}")
+        
 # main function
 def main():
     default_path = f"C:/Users/{os.getlogin()}/Downloads"
@@ -39,7 +41,6 @@ def main():
         user_inp = user_inp.replace("\\", "/")
         source_dir = user_inp
     logic(source_dir)
-
 
 if __name__ == "__main__":
     main()
